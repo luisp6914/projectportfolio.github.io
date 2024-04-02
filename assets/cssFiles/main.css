@@ -1,275 +1,78 @@
-/*The body*/
-.is-preload{
-  background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/bg.jpg");
-}
-
-/* Intro */
-.intro{
-  text-align: center;
-  margin-top: 9em;
-  margin-bottom: 20em;
-  color: white;
-}
-
-#introTitle{
-  font-size: 4em;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-#introDescription{
-  font-family: "Times New Roman", Times, serif;
-  font-size: 1.5em;
-}
-
-
-.container{
-  background-color: rgb(190, 190, 190)
-}
-
-.container, .navbar {
-  max-width: 1000px;
-  margin-bottom: 20em;
-  margin: 0 auto;
-}
-
-.navbar{
-  text-align: center;
-  
-  background-image: url("../../images/pic03.jpg");
-}
-
-.project {
-  margin: 40px 0;
-}
-
-.project h2 {
-  font-size: 24px;
-  margin-bottom: 16px;
-  color: black;
-}
-
-.project p {
-  font-size: 16px;
-  margin-bottom: 32px;
-}
-
-
-/* Add some basic styling for the body and headings */
-body {
-  font-family: Arial, sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
-  color: black;
-}
-
-/*Project 1 slide show*/
-/* Slideshow container */
-.project1-slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-/* Hide the images by default */
-.project1Slides {
-  display: none;
-}
-
-/*Project 2 slide show*/
-.project2-slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-/* Hide the images by default */
-.project2Slides {
-  display: none;
-}
-
-/*Project 4 slide show*/
-.project4-slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-/* Hide the images by default */
-.project4Slides {
-  display: none;
-}
-
-/* Next & previous buttons project1 */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Next & previous buttons project2 */
-.prev2, .next2 {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next2 {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev2:hover, .next2:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Next & previous buttons project4 */
-.prev4, .next4 {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next4 {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev4:hover, .next4:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
+body{
+  background-image: url(/images/bodyBackground.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   width: 100%;
-  text-align: center;
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: cornflowerblue;
-  font-weight: bold;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
+/* Banner content */
+#top-banner {
+  overflow: hidden;
+  position: fixed;
   top: 0;
-  margin-top: 2em;
-}
-/*project1 dot*/
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: black;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+  width: 100%;
+  color: #fff;
+  background-image: url(/images/headerBackground.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-.active, .dot:hover {
-  background-color: #717171;
-}
-/*project 2 dot*/
-.dot2 {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: black;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+#menu p {
+  padding-top: 10px;
+  padding-left: 25px;
+  font-size: 22px;
 }
 
-.active, .dot2:hover {
-  background-color: #717171;
+/* Main content */
+#main {
+  margin-top: 50px;
 }
 
-/*project4 dot*/
-/* The dots/bullets/indicators */
-.dot4 {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: black;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+/* Text */
+#intro-msg {
+  margin-top: 35%;
 }
 
-.active, .dot4:hover {
-  background-color: #717171;
+#intro-msg a {
+color: white;
+text-decoration: none;
 }
 
-/* Fading animation project 1*/
-.fade1 {
-  animation-name: fade;
-  animation-duration: 1.5s;
+/* Image */
+#intro-img {
+  margin-top: 25%;
 }
 
-@keyframes fade1 {
-  from {opacity: .4}
-  to {opacity: 1}
+img {
+  width: 420px;
+  height: 420px;
+  object-fit: contain;
+}
+/*footer*/
+#footer{
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  margin-left: 114px;
+  margin-right: 114px;
+  padding: 15px;
+  border-top: 1px solid #fff;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  color: #fff;
 }
 
-/* Fading animation project 2*/
-.fade2 {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
+/* Screen Settings */
+@media (max-width: 576px) {
+  #me {
+      display: none;
+  }
 
-@keyframes fade2 {
-  from {opacity: .4}
-  to {opacity: 1}
+  #intro-msg {
+      margin-top: 50%;
+      padding-left: 10%;
+      padding-right: 10%;
+      text-align: center;
+  }
 }
