@@ -1,0 +1,386 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<!--Font Awesome link-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+<!--Font link-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<title>Projects</title>
+<style>
+    
+    
+    body{
+        background-image: url(/images/bodyBackground.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+    }
+    /*Ajusting the nav bar and tabs*/
+    #navbarNavTabs{
+        justify-content: center;
+    }
+    #nav-covidProject-tab.active, #nav-partPicker-tab.active ,#nav-linkedList-tab.active ,#nav-stock-tab.active{
+        background-color: transparent;
+        font-weight: bold;
+        border: none;
+    }
+    #nav-covidProject-tab, #nav-partPicker-tab, #nav-linkedList-tab , #nav-stock-tab{
+        color: #fff;   
+        margin: 0px !important;
+        font-family: 'Open Sans', sans-serif;
+    }
+    #nav-covidProject-tab:hover, #nav-partPicker-tab:hover, #nav-linkedList-tab:hover , #nav-stock-tab:hover{
+        border: none !important;   
+        outline: none !important;
+        
+    }
+    .nav-link{
+        transition: none;
+    }
+    .nav-link:hover{
+        padding-top: 3px;
+    }
+
+
+    #nav-header{
+        background-image: url(/images/headerBackground.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    #logo{
+        height: 2em;
+        width: 2em;
+        color: #fff;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        outline: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #logo:hover{
+        color: red !important;
+        border-color: red;
+    }
+    
+    .navbar-toggler{
+        color: #fff !important;
+       
+    }
+    #nav-tab{
+        border: none;
+    }
+
+    /*Adjusting the tab content*/
+    #nav-tabContent{
+        color: #fff;
+    }
+    #nav-covidProject, #nav-partPicker, #nav-stock, #nav-linkedList{
+        height: 100%;   
+        width: 100%;
+    }
+    #projectImages, #projectDescription{
+        margin-top: 48px;
+        padding: 16px;
+        font-family: 'Open Sans', sans-serif;
+    }
+    #projectDescription p{
+        font-size: 16px;
+    }
+
+    #nav-tabContent{
+        text-align: center;
+    }
+    /*Carousel*/
+    #carouselIndicator1, #carouselPrevious1, #carouselNext1{
+        background-color: #000;
+    }
+    #linkedListCarouselItem img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    /*footer*/
+    #footer{
+        margin-top: 7%;
+        margin-bottom: 3rem;
+        padding: 15px;
+        border-top: 1px solid #fff;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    /*Hiding elements based on screen size*/
+    @media (min-width: 767.98px) {
+        #headerWords {
+            display: none;
+        }
+        #projectImages, #projectDescription{
+            margin-top: 5%;
+            padding: 16px;
+        }
+        #projectImages{
+            margin-left: 35px;
+            margin-right: 50px;
+        }
+        #projectDescription{
+            margin-left: 25px;
+        }
+        #logo:hover{
+            color: #0096FF !important;
+            border-color: #0096FF;
+        }
+        #projectDescription{
+            border: solid .5px #f6f6f6;
+        }
+    }
+
+</style>
+</head>
+<body>
+
+    <div id="center">
+        <!--Project Tabs-->
+        <nav class="navbar sticky-top navbar-expand-md navbar-light bg-dark" id="nav-header">
+            <div class="container-fluid">
+                <!--Collapsed button-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavTabs" aria-controls="navbarNavTabs" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div id="headerWords" style="color: #fff;">
+                    <h1>Projects</h1>
+                </div>
+                <a class="navbar-brand" href="index.html" id="logo"><i class="fa-solid fa-l"></i></a>
+                <!--Collapsible Project tabs-->
+                <div class="collapse navbar-collapse" id="navbarNavTabs" >
+                    <div class="nav nav-tabs row" id="nav-tab" role="tablist">
+                        
+                        <!--Covid project tab-->
+                        <button class="nav-link col-sm-12 col-md-3 col-lg-3 active" id="nav-covidProject-tab" data-bs-toggle="tab" data-bs-target="#nav-covidProject" type="button" role="tab" aria-controls="nav-covidProject" aria-selected="true">
+                            <div>Covid Vaccine Project</div>
+                        </button>
+                        <!--PC Part Picker Tab-->
+                        <button class="nav-link col-sm-12 col-md-3 col-lg-3" id="nav-partPicker-tab" data-bs-toggle="tab" data-bs-target="#nav-partPicker" type="button" role="tab" aria-controls="nav-partPicker" aria-selected="false">
+                            <div>PC Part Picker</div>
+                        </button>
+                        <!--Tesla Stocks  Tab-->
+                        <button class="nav-link col-sm-12 col-md-3 col-lg-3" id="nav-stock-tab" data-bs-toggle="tab" data-bs-target="#nav-stock" type="button" role="tab" aria-controls="nav-stock" aria-selected="false">
+                            <div>Tesla Stocks Project</div>
+                        </button>
+                        <!--2D Linked List Tab-->
+                        <button class="nav-link col-sm-12 col-md-3 col-lg-3" id="nav-linkedList-tab" data-bs-toggle="tab" data-bs-target="#nav-linkedList" type="button" role="tab" aria-controls="nav-linkedList" aria-selected="false">
+                            <div>2D Linked List</div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+        <!--Project tab content-->
+        <div class="tab-content container" id="nav-tabContent">
+            <!--Covid Project-->
+            <div class="tab-pane fade show active" id="nav-covidProject" role="tabpanel" aria-labelledby="nav-covidProject-tab">
+                <div class="row">
+                    <div class="col-sm-12 col-md-7 col-lg-7" id="projectImages">
+                        <div id="carouselIndicators1" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carouselIndicators1" data-bs-slide-to="0" id="carouselIndicator1" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carouselIndicators1" data-bs-slide-to="1" id="carouselIndicator1" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#carouselIndicators1" data-bs-slide-to="2" id="carouselIndicator1" aria-label="Slide 3"></button>
+                              <button type="button" data-bs-target="#carouselIndicators1" data-bs-slide-to="3" id="carouselIndicator1" aria-label="Slide 4"></button>
+                              <button type="button" data-bs-target="#carouselIndicators1" data-bs-slide-to="4" id="carouselIndicator1" aria-label="Slide 5"></button>
+                            </div>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="/images/frontPage.png" class="d-block w-100" alt="Home Page">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="images/vaccines.png" class="d-block w-100" alt="Vaccine Management">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="/images/addDoses.png" class="d-block w-100" alt="Adding a dose">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="/images/addPatients.png" class="d-block w-100" alt="Adding a patient">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="images/patients.png" class="d-block w-100" alt="Patient Management">
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators1" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true" id="carouselPrevious1"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators1" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true" id="carouselNext1"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-3 col-lg-3" id="projectDescription">
+                        <p>
+                            Developed an online system to help a hypothetical local hospital for its COVID vaccination effort. The
+                            system will kept track of both patient and vaccine information for the hospital
+                        <p>
+                    </div>
+                </div>
+                
+            </div>
+            <!--PC Part Picker Project-->
+            <div class="tab-pane fade" id="nav-partPicker" role="tabpanel" aria-labelledby="nav-partPicker-tab">
+                <div class="row">
+                    <div class="col-sm-12 col-md-7 col-lg-7" id="projectImages">
+                        <div id="carouselIndicators2" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carouselIndicators2" data-bs-slide-to="0" id="carouselIndicator2" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carouselIndicators2" data-bs-slide-to="1" id="carouselIndicator2" aria-label="Slide 2"></button>
+                            </div>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="/images/pcPartPicker.png" class="d-block w-100" alt="Picking PC Parts">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="images/selectedItems.png" class="d-block w-100" alt="Selected PC Parts">
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators2" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true" id="carouselPrevious2"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators2" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true" id="carouselNext2"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-3 col-lg-3" id="projectDescription">
+                        <p>
+                            Developed an interface where users can select different PC parts from a given list. The price selected PC
+                            components are then displayed.
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+            <!--Stock Project-->
+            <div class="tab-pane fade" id="nav-stock" role="tabpanel" aria-labelledby="nav-stock-tab">
+                <div class="row">
+                    <div class="col-sm-12 col-md-7 col-lg-7" id="projectImages">
+                        <div id="carouselSlideOnly" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="images/stocks.png" class="d-block w-100" alt="First 10 Stocks">
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-3 col-lg-3" id="projectDescription">
+                        <p>
+                            Developed a program that reads and processes historic stock data for the Tesla Company. The data is
+                            extracted from a .csv file and then processed to display information regarding a specific stock.
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+            <!--Linked List Project-->
+            <div class="tab-pane fade" id="nav-linkedList" role="tabpanel" aria-labelledby="nav-linkedList-tab">
+                <div class="row">
+                    <div class="col-sm-12 col-md-7 col-lg-7" id="projectImages">
+                        <div id="carouselIndicators4" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carouselIndicators4" data-bs-slide-to="0" id="carouselIndicator3" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carouselIndicators4" data-bs-slide-to="1" id="carouselIndicator3" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#carouselIndicators4" data-bs-slide-to="2" id="carouselIndicator3" aria-label="Slide 3"></button>
+                              <button type="button" data-bs-target="#carouselIndicators4" data-bs-slide-to="3" id="carouselIndicator3" aria-label="Slide 4"></button>
+                              <button type="button" data-bs-target="#carouselIndicators4" data-bs-slide-to="4" id="carouselIndicator3" aria-label="Slide 5"></button>
+                              <button type="button" data-bs-target="#carouselIndicators4" data-bs-slide-to="5" id="carouselIndicator3" aria-label="Slide 6"></button>
+                              <button type="button" data-bs-target="#carouselIndicators4" data-bs-slide-to="6" id="carouselIndicator3" aria-label="Slide 7"></button>
+                              <button type="button" data-bs-target="#carouselIndicators4" data-bs-slide-to="7" id="carouselIndicator3" aria-label="Slide 8"></button>
+                              <button type="button" data-bs-target="#carouselIndicators4" data-bs-slide-to="8" id="carouselIndicator3" aria-label="Slide 9"></button>
+                              <button type="button" data-bs-target="#carouselIndicators4" data-bs-slide-to="9" id="carouselIndicator3" aria-label="Slide 10"></button>
+                              <button type="button" data-bs-target="#carouselIndicators4" data-bs-slide-to="10" id="carouselIndicator3" aria-label="Slide 11"></button>
+                              <button type="button" data-bs-target="#carouselIndicators4" data-bs-slide-to="11" id="carouselIndicator3" aria-label="Slide 12"></button>
+                              <button type="button" data-bs-target="#carouselIndicators4" data-bs-slide-to="12" id="carouselIndicator3" aria-label="Slide 13"></button>
+                              <button type="button" data-bs-target="#carouselIndicators4" data-bs-slide-to="13" id="carouselIndicator3" aria-label="Slide 14"></button>
+                            </div>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active" id="linkedListCarouselItem">
+                                <img src="/images/linkList1.png" class="" alt="...">
+                              </div>
+                              <div class="carousel-item" id="linkedListCarouselItem">
+                                <img src="images/linkList2.png" class="" alt="...">
+                              </div>
+                              <div class="carousel-item" id="linkedListCarouselItem">
+                                <img src="/images/linkList3.png" class="" alt="...">
+                              </div>
+                              <div class="carousel-item" id="linkedListCarouselItem">
+                                <img src="/images/linkList4.png" class="" alt="...">
+                              </div>
+                              <div class="carousel-item" id="linkedListCarouselItem">
+                                <img src="images/linkList5.png" class="" alt="...">
+                              </div>
+                              <div class="carousel-item" id="linkedListCarouselItem">
+                                <img src="images/linkList6.png" class="" alt="...">
+                              </div>
+                              <div class="carousel-item" id="linkedListCarouselItem">
+                                <img src="/images/linkList7.png" class="" alt="...">
+                              </div>
+                              <div class="carousel-item" id="linkedListCarouselItem">
+                                <img src="/images/linkList8.png" class="" alt="...">
+                              </div>
+                              <div class="carousel-item" id="linkedListCarouselItem">
+                                <img src="images/linkList9.png" class="" alt="...">
+                              </div>
+                              <div class="carousel-item" id="linkedListCarouselItem">
+                                <img src="images/linkList10.png" class="" alt="...">
+                              </div>
+                              <div class="carousel-item" id="linkedListCarouselItem">
+                                <img src="/images/linkList11.png" class="" alt="...">
+                              </div>
+                              <div class="carousel-item" id="linkedListCarouselItem">
+                                <img src="/images/linkList12.png" class="" alt="...">
+                              </div>
+                              <div class="carousel-item" id="linkedListCarouselItem">
+                                <img src="images/linkList13.png" class="d-block w-100" alt="...">
+                              </div>
+                              <div class="carousel-item" id="linkedListCarouselItem">
+                                <img src="images/linkList14.png" class="" alt="...">
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators4" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true" id="carouselPrevious3"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators4" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true" id="carouselNext3"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-3 col-lg-3" id="projectDescription">
+                        <p>
+                            Develop a generic program that accepts an array list of information and turns it into 2D Linked List data
+                            structure
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+            <footer id="footer">
+                <p>
+                    Made by Luis Perez
+                </p>
+            </footer>
+        </div>
+    </div>
+
+
+ 	<!--BootStrap JavaScript -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
