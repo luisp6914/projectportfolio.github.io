@@ -1,0 +1,78 @@
+body{
+    background-image: url(/images/bodyBackground.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+
+/* Banner content */
+#top-banner {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    color: #fff;
+    background-image: url(/images/headerBackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#menu p {
+    padding-top: 10px;
+    padding-left: 25px;
+    font-size: 22px;
+}
+
+/* Main content */
+#main {
+    margin-top: 50px;
+}
+
+/* Text */
+#intro-msg {
+    margin-top: 35%;
+}
+
+#intro-msg a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Image */
+#intro-img {
+    margin-top: 25%;
+}
+
+img {
+    width: 420px;
+    height: 420px;
+    object-fit: contain;
+}
+/*footer*/
+#footer{
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    margin-left: 114px;
+    margin-right: 114px;
+    padding: 15px;
+    border-top: 1px solid #fff;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    color: #fff;
+}
+
+/* Screen Settings */
+@media (max-width: 576px) {
+    #me {
+        display: none;
+    }
+
+    #intro-msg {
+        margin-top: 50%;
+        padding-left: 10%;
+        padding-right: 10%;
+        text-align: center;
+    }
+}
