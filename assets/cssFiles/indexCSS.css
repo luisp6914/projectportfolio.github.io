@@ -1,5 +1,5 @@
 body{
-    background-image: url(/images/bodyBackground.png);
+    background-image: url("/images/bodyBackground.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -13,7 +13,7 @@ body{
     top: 0;
     width: 100%;
     color: #fff;
-    background-image: url(/images/headerBackground.png);
+    background-image: url("/images/headerBackground.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -38,6 +38,13 @@ body{
 #intro-msg a {
     color: white;
     text-decoration: none;
+}
+#intro-msg h1{
+    margin-bottom: 50px; 
+    color: #fff;
+}
+#intro-msg p{
+    color: rgb(187, 187, 187);
 }
 
 /* Image */
